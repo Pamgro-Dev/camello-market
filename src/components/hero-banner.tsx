@@ -1,20 +1,50 @@
 export default function HeroBanner() {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 px-6 py-14 text-white sm:px-10">
-      <div className="relative z-10 max-w-2xl space-y-4">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-300">
-          Camello Market Collection
-        </p>
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-          Premium essentials for modern living.
+    <section className="relative overflow-hidden rounded-3xl" style={{ background: '#0f0f0d', minHeight: '320px', display: 'flex', alignItems: 'center' }}>
+
+      {/* Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <svg width="100%" height="100%" viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
+            </pattern>
+            <radialGradient id="glow1" cx="75%" cy="30%" r="55%">
+              <stop offset="0%" stopColor="#c8a96e" stopOpacity="0.18" />
+              <stop offset="100%" stopColor="#0f0f0d" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+          <rect width="800" height="320" fill="url(#grid)" />
+          <rect width="800" height="320" fill="url(#glow1)" />
+          <circle cx="100" cy="280" r="90" fill="rgba(160,131,111,0.04)" />
+        </svg>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 px-12 py-12 max-w-2xl">
+
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 mb-7" style={{ background: 'rgba(255,255,255,0.05)', border: '0.5px solid rgba(255,255,255,0.1)', borderRadius: '999px', padding: '5px 14px' }}>
+          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#c8a96e', display: 'inline-block' }} />
+          <span style={{ fontFamily: 'Helvetica Neue, Helvetica, sans-serif', fontSize: '11px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase' }}>
+            New Drop — Camello Market
+          </span>
+        </div>
+
+        {/* Headline */}
+        <h1 style={{ fontFamily: 'Helvetica Neue, Helvetica, sans-serif', fontSize: 'clamp(30px, 5vw, 52px)', fontWeight: 700, color: '#f5f0e8', lineHeight: 1.05, margin: 0, letterSpacing: '-0.03em', textTransform: 'uppercase' }}>
+          Don't settle<br />
+          <span style={{ color: '#c8a96e' }}>for average.</span>
         </h1>
-        <p className="text-sm text-zinc-200 sm:text-base">
-          Discover curated products with a clean shopping experience inspired by
-          the best modern design systems.
+
+        {/* Subtext */}
+        <p style={{ fontFamily: 'Helvetica Neue, Helvetica, sans-serif', fontSize: '13px', color: 'rgba(245,240,232,0.4)', lineHeight: 1.8, margin: '20px 0 0', maxWidth: '360px', fontWeight: 300, letterSpacing: '0.02em' }}>
+          Only the stuff worth buying. Curated, shipped, done.
         </p>
       </div>
-      <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-white/10 blur-2xl" />
-      <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-indigo-300/20 blur-2xl" />
+
+      {/* Bottom line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(200,169,110,0.25), transparent)' }} />
     </section>
   );
 }
