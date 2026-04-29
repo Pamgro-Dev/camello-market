@@ -33,13 +33,13 @@ export default function HeroBanner() {
 
         {/* Headline */}
         <h1 style={{ fontFamily: 'Helvetica Neue, Helvetica, sans-serif', fontSize: 'clamp(30px, 5vw, 52px)', fontWeight: 700, color: '#f5f0e8', lineHeight: 1.05, margin: 0, letterSpacing: '-0.03em', textTransform: 'uppercase' }}>
-          Don't settle<br />
-          <span style={{ color: '#c8a96e' }}>for average.</span>
+          Everthing<br />
+          <span style={{ color: '#c8a96e' }}>In Camello</span>
         </h1>
 
         {/* Subtext */}
         <p style={{ fontFamily: 'Helvetica Neue, Helvetica, sans-serif', fontSize: '13px', color: 'rgba(245,240,232,0.4)', lineHeight: 1.8, margin: '20px 0 0', maxWidth: '360px', fontWeight: 300, letterSpacing: '0.02em' }}>
-          Only the stuff worth buying. Curated, shipped, done.
+          We have everything you need in one place.
         </p>
       </div>
 
